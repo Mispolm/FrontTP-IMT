@@ -2,7 +2,7 @@
 
 ## Fichiers à installer 
 - NodeJS : [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-- VueCLI : dans un cmd, tapez :
+- VueCLI: dans un cmd, tapez :
 ```
 npm install -g @vue/cli
 ```
