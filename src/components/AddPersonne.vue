@@ -3,11 +3,6 @@
     <div v-if="!submitted">
       <!-- A COMPLETER -->
 
-    <input type="text" class="name" id="name" required v-model="currentPersonne.name" name="name" />
-    <input type="text" class="surname" id="surname" required v-model="currentPersonne.surname" name="surname" />
-    <input type="text" class="phone" id="phone" required v-model="currentPersonne.phone" name="phone" />
-    <input type="text" class="city" id="city" required v-model="currentPersonne.city" name="city" />
-
       <button @click="creerPersonne" class="btn btn-success">Ajouter</button>
     </div>
 
@@ -40,8 +35,10 @@ export default {
       var data = {
         name: this.personne.name,
         surname: this.personne.surname,
-        phone:this.personne.phone,
-        city:this.personne.city,
+        phone: this.personne.phone,
+        city: this.personne.city,
+
+        // A COMPLETER
       };
 
       // A COMPLETER
@@ -52,9 +49,12 @@ export default {
         })
         .catch(e => {
           console.log(e);
-        });
-          
-      
+        });;
+          this.$router.push({ name:"personnes" });
+        })
+        .catch(e => {
+          console.log(e);
+        });  
     },
     
     resetForm() {
