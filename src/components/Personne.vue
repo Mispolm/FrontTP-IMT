@@ -20,7 +20,33 @@
     </div>
   </div> 
 
-  
+  <div class="col-sm-6">
+    <div class="card border-primary mb-3">
+      <div class="card-header text-center">Modification</div>
+      <div class="card-body text-primary">
+          <p class="card-text">Veuillez saisir les informations ci-dessous pour mettre à jour la personne</p> 
+    
+          <li class="list-group-item list-group-item-primary">Nom :   
+          <input type="text" class="surname" id="surname" v-model="currentPersonne.name" />       
+          </li>
+          <li class="list-group-item list-group-item-primary">Prénom :  
+          <input type="text" class="surname" id="surname" v-model="currentPersonne.surname" />       
+          </li>
+          <li class="list-group-item list-group-item-primary">Téléphone :
+          <input type="text" class="phone" id="phone" v-model="currentPersonne.phone" />       
+          </li>
+          <li class="list-group-item list-group-item-primary mb-3">Ville :
+          <input type="text" class="phone" id="phone" v-model="currentPersonne.city" />       
+          </li>
+          <button type="submit" class="btn btn-primary rounded-pill"
+          @click="updatePersonne"
+          >
+          Modifier
+          </button>
+          <p>{{ message }}</p>
+       </div>
+    </div>
+  </div>
 </div>    
 
  
