@@ -2,36 +2,32 @@
   <!-- A COMPLETER -->
 
     <!-- A INCLURE DANS LE FORM -->
-    <button class="badge badge-danger mr-2"
-      @click="deletePersonne"
-    >
-      Supprimer
-    </button>
 
-    <!-- A INCLURE DANS LE FORM -->
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card border-danger mb-3">
+      <div class="card-header text-center">Suppression</div>
+      <div class="card-body">
+        <div class="card-body text-danger">
+        <p class="card-text">Êtes-vous sûr de vouloir supprimer cette personne?</p>
+        <button class="btn btn-danger rounded-pill"
+        @click="deletePersonne"
+        >
+        Supprimer
+        </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  
+</div>    
 
  
-
-  <div v-if="currentPersonne">
-
     
-    <input type="text" class="name" id="name" v-model="currentPersonne.name" />
-    <input type="text" class="surname" id="surname" v-model="currentPersonne.surname" />
-    <input type="text" class="phone" id="phone" v-model="currentPersonne.phone" />
-    <input type="text" class="city" id="city" v-model="currentPersonne.city" />
-
-
-  </div>
-
-    <button type="submit" class="badge badge-success"
-      @click="updatePersonne"
-    >
-      Modifier
-    </button>
-    <p>{{ message }}</p>
-
-
     
+    
+  
 </template>
 
 <script>
