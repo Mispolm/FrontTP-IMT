@@ -19,11 +19,12 @@
       </div>
     </div>
   </div> 
-
-  <div class="col-sm-6">
-    <div class="card border-primary mb-3">
-      <div class="card-header text-center">Modification</div>
-      <div class="card-body text-primary">
+  
+  <div v-if="currentPersonne">
+    <div class="col-sm-10">
+      <div class="card border-primary mb-3">
+        <div class="card-header text-center">Modification</div>
+        <div class="card-body text-primary">
           <p class="card-text">Veuillez saisir les informations ci-dessous pour mettre à jour la personne</p> 
     
           <li class="list-group-item list-group-item-primary">Nom :   
@@ -44,15 +45,12 @@
           Modifier
           </button>
           <p>{{ message }}</p>
-       </div>
+         </div>
+      </div>
     </div>
   </div>
-</div>    
-
- 
-    
-    
-    
+</div>  
+  
   
 </template>
 
